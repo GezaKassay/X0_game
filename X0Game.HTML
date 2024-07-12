@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+     .col-1 {
+        background-color: rgb(218, 218, 218);
+        border: 1px solid black;
+     }
+     .col-2 {
+        background-color: rgb(218, 218, 218);
+        border: 1px solid black;
+     }   
+    </style>
+</head>
+
+  <body>    
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-2" id="Player1">Player1</div>
+          <div class="col-2" id="Player2">Player2</div>
+        </div>
+    </div>
+    <div class="container">        
+        <label for="EnterName">Enter name:</label>   
+        <input type="text" id="EnterName" name="EnterName"> 
+        <button class="btn btn-primary" name="save" onclick="updateName()">Save</button>           
+    </div>            
+    </br>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-1" id="fstCell">&nbsp;</div>
+          <div class="col-1" id="secCell">&nbsp;</div>
+          <div class="col-1" id="thrdCell">&nbsp;</div>
+        </div>
+        <div class="row">
+          <div class="col-1" id="frthCell">&nbsp;</div>
+          <div class="col-1" id="fthCell">&nbsp;</div>
+          <div class="col-1" id="sxthCell">&nbsp;</div>
+        </div>
+        <div class="row">
+          <div class="col-1" id="svthCell">&nbsp;</div>
+          <div class="col-1" id="egthCell">&nbsp;</div>
+          <div class="col-1" id="ninthCell">&nbsp;</div>          
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
