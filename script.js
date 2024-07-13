@@ -3,10 +3,12 @@ let clickCounter = 0;
 function updateName() {
     ++clickCounter;
     if (clickCounter % 2 != 0) {
-        document.getElementById("Player1").innerHTML = document.getElementById("EnterName").value;
+        document.getElementById("Player1").innerHTML = 
+        document.getElementById("EnterName").value;
         document.getElementById("EnterName").value = "";
     } else {
-        document.getElementById("Player2").innerHTML = document.getElementById("EnterName").value;
+        document.getElementById("Player2").innerHTML = 
+        document.getElementById("EnterName").value;
         document.getElementById("EnterName").value = "";
     }
 }
@@ -25,5 +27,14 @@ function updateCellValue() {
         document.getElementById(elementID).innerHTML = "X";
     } else {
         document.getElementById(elementID).innerHTML = "0";
+    }
+}
+
+let cellIDs = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+checkContent(cellIDs);
+
+function checkContent(array) {
+    for (let i = 0; i < array.length; ++i) {
+        
     }
 }
