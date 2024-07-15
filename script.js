@@ -28,13 +28,57 @@ function updateCellValue() {
     } else {
         document.getElementById(elementID).innerHTML = "0";
     }
+    if (clickCounter >= 5) {
+        n = 3;
+        checkLines(cellIDs);
+        checkColumns(cellIDs);
+    }
 }
 
 let cellIDs = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-checkContent(cellIDs);
+let n = 3;
 
-function checkContent(array) {
-    for (let i = 0; i < array.length; ++i) {
-        
+function checkLines(array) {
+    let matchX = 0;
+    let match0 = 0;
+    for (let i = 0; i < n; ++i) {
+        if (document.getElementById(array[i]).innerHTML === "X") {
+            ++matchX;
+        }
+        if (document.getElementById(array[i]).innerHTML === "0") {
+            ++match0;
+        }
+        if (matchX === 3) {            
+            alert(document.getElementById("Player1").innerHTML);
+        }
+        if (match0 === 3) {           
+            alert(document.getElementById("Player2").innerHTML);
+        }                          
+        if (i === n - 1 && i < cellIDs.length - 1 && !(matchX === 3 || match0 === 3)) {
+            matchX = 0;
+            match0 = 0;
+            n += 3;
+        }           
     }
+}
+
+let m = 6
+
+function checkColumns(array) {
+    for (let i = 0; i <= ; ++i) {
+        if (document.getElementById(array[i]).innerHTML === "X" &&) {
+            ++matchX;
+        }
+        if (document.getElementById(array[i]).innerHTML === "0") {
+            ++match0;
+        }
+        if (matchX === 3) {            
+            alert(document.getElementById("Player1").innerHTML);
+        }
+        if (match0 === 3) {           
+            alert(document.getElementById("Player2").innerHTML);
+        }  
+        alert(array[i]);         
+    }
+
 }
