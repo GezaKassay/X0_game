@@ -37,7 +37,7 @@ function updateCellValue() {
 }
 
 function checkForWinner(array) {    
-    for (let i = 0; i < idMatrix.length; ++i) {
+    for (let i = 0; i < array.length; ++i) {
         let matchX = 0;
         let match0 = 0;
         for (let j = 0; j < matrixColumns; ++j) {
