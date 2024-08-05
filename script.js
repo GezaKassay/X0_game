@@ -21,7 +21,6 @@ for (let i = 0; i < cells.length; ++i) {
 
 let idMatrix = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"], ["1", "4",
     "7"], ["2", "5", "8"], ["3", "6", "9"], ["1", "5", "9"], ["7", "5", "3"]];
-let matrixColumns = 3;
 
 function updateCellValue() {    
     elementID = this.id;
@@ -36,15 +35,15 @@ function updateCellValue() {
     }   
 }
 
-function checkForWinner(array) {    
-    for (let i = 0; i < array.length; ++i) {
+function checkForWinner(matrix) {    
+    for (let i = 0; i < matrix.length; ++i) {
         let matchX = 0;
         let match0 = 0;
-        for (let j = 0; j < matrixColumns; ++j) {
-            if (document.getElementById(array[i][j]).innerHTML === "X") {
+        for (let j = 0; j < 3; ++j) {
+            if (document.getElementById(matrix[i][j]).innerHTML === "X") {
                 ++matchX;
             }
-            if (document.getElementById(array[i][j]).innerHTML === "0") {
+            if (document.getElementById(matrix[i][j]).innerHTML === "0") {
                 ++match0;
             }
             if (matchX === 3) {
